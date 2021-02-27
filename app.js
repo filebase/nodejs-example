@@ -1,5 +1,5 @@
 var AWS = require('aws-sdk');
-var s3 = new AWS.S3({endpoint: 'https://s3.filebase.com'});
+var s3 = new AWS.S3({endpoint: 'https://s3.filebase.com', signatureVersion: 'v4'});
 
 s3.listBuckets(function(err, data) {
   if (err) {
